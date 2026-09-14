@@ -1,0 +1,223 @@
+/* Configurações Globais (Foco em Acessibilidade e Leitura Fácil) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px; /* Fonte ampliada para facilitar a leitura */
+  line-height: 1.6;
+  background-color: #f4f7f6;
+  color: #222222;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #004b87;
+  color: #ffffff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.3rem;
+}
+
+/* Navegação */
+nav {
+  background-color: #00335c;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: bold;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #005bb5;
+  text-decoration: underline;
+}
+
+/* Seções e Cards */
+section {
+  margin: 40px 0;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-left: 8px solid #004b87;
+}
+
+.card.destaque {
+  border-left-color: #28a745;
+  background-color: #eef9f1;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #004b87;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Apresentação (Intro) */
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.intro img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    flex-direction: row;
+  }
+  .intro img {
+    width: 50%;
+  }
+}
+
+/* Listas */
+.dicas-lista li, .solucoes-lista li {
+  margin-bottom: 15px;
+  list-style-position: inside;
+}
+
+/* Grid de Golpes */
+.grid-golpes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .grid-golpes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card-golpe {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+.card-golpe img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Estilização do Quiz */
+.quiz-pergunta {
+  margin-bottom: 25px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.quiz-pergunta p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.quiz-opcao {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #e9ecef;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quiz-opcao:hover {
+  background-color: #d0d7de;
+}
+
+.quiz-opcao.correta {
+  background-color: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+  font-weight: bold;
+}
+
+.quiz-opcao.errada {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+.resultado {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #004b87;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.escondido {
+  display: none;
+}
+
+/* Rodapé */
+footer {
+  background-color: #222222;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 40px;
+  font-size: 1rem;
+}
